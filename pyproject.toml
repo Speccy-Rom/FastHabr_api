@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fasthabr_api"
+version = "0.1.0"
+description = "API своего собственного мини Хабра без кармы и рейтингов, зато с блэкджеком и с тестами, аутентификацией, миграциями и асинхронной работой с БД"
+authors = ["Speccy-Rom <speccy.rom@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.0"
+unicorn = "^1.0.3"
+SQLAlchemy = "1.4.22"
+alembic = "1.6.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
