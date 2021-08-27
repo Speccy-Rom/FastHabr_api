@@ -3,7 +3,7 @@ from sqlalchemy.dialects.postgresql import UUID
 
 metadata = sqlalchemy.MetaData()
 
-user_table = sqlalchemy.Table(
+users_table = sqlalchemy.Table(
     'users',
     metadata,
     sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
