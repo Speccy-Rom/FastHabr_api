@@ -7,11 +7,15 @@ authors = ["Speccy-Rom <speccy.rom@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = "^0.68.0"
-unicorn = "^1.0.3"
 SQLAlchemy = "1.4.22"
 alembic = "1.6.5"
+databases = "^0.5.0"
+asyncpg = "^0.24.0"
+psycopg2 = "^2.9.1"
+uvicorn = "0.15.0"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
