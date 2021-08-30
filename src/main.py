@@ -1,8 +1,9 @@
 import uvicorn
+import databases
 
+from src.routers import users
 from src.models.database import database
 from fastapi import FastAPI
-import databases
 
 app = FastAPI()
 
@@ -18,3 +19,13 @@ async def shutdown():
     # когда приложение останавливается разрываем соединение с БД
     await database.disconnect()
 
+
+app.include_router(users.router)
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True,
+    )
