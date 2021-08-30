@@ -18,6 +18,6 @@ if TESTING:
 else:
     DB_NAME = "fasthabr_api"
     SQLALCHEMY_DATABASE_URL = (
-        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:5432/{DB_NAME}"
+        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:32700/{DB_NAME}"
     )
     database = databases.Database(SQLALCHEMY_DATABASE_URL)

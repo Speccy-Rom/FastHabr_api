@@ -1,6 +1,8 @@
 import uvicorn
+
 from src.models.database import database
 from fastapi import FastAPI
+import databases
 
 app = FastAPI()
 
