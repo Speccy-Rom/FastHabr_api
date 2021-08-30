@@ -4,9 +4,9 @@ import string
 from datetime import datetime, timedelta
 from sqlalchemy import and_
 
-from src.models.database import database
-from src.models.users import tokens_table, users_table
-from src.schemas import users as user_schema
+from app.models.database import database
+from app.models.users import tokens_table, users_table
+from app.schemas import users as user_schema
 
 
 def get_random_string(length=12):
@@ -48,9 +48,9 @@ async def get_user_by_token(token: str):
 async def create_user_token(user_id: int):
     """ Создает токен для пользователя с указанным user_id """
     query = (
-        tokens_table.insert()
-            .values(expires=datetime.now() + timedelta(weeks=2), user_id=user_id)
-            .returning(tokens_table.c.token, tokens_table.c.expires)
+        tokens_table.insert().values(
+            expires=datetime.now() + timedelta(weeks=2), user_id=user_id).returning
+        (tokens_table.c.token, tokens_table.c.expires)
     )
 
     return await database.fetch_one(query)

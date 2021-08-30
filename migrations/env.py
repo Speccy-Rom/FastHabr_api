@@ -10,7 +10,7 @@ from alembic import context
 # add current path to PYTHONPATH, otherwise app module will not be found when alembic executing
 sys.path.append(os.getcwd())
 
-from src.models import database, posts, users
+from app.models import database, posts, users
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

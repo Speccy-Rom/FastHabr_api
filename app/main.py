@@ -1,9 +1,8 @@
 import uvicorn
-import databases
-
-from src.routers import users
-from src.models.database import database
 from fastapi import FastAPI
+
+from routers import users
+from models.database import database
 
 app = FastAPI()
 
