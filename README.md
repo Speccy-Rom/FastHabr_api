@@ -1,6 +1,6 @@
 # Asynchronous Rest API of your own mini Habr
 
-#### Rest API of your own mini Habr without karma and ratings, but with blackjack and with tests, authentication, migrations and asynchronous work with the database
+##### Rest API of your own mini Habr without karma and ratings, but with blackjack and with tests, authentication, migrations and asynchronous work with the database
 
 ## How to run
 

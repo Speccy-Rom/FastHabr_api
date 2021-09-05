@@ -4,7 +4,7 @@ services:
   - docker
 
 env:
-  DOCKER_COMPOSE_VERSION: v2.0.0-rc.2
+  DOCKER_COMPOSE_VERSION: v2.0.0
 
 before_script:
   - docker-compose up -d --build
