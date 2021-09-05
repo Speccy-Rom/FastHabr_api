@@ -62,7 +62,7 @@ def test_user_detail_forbidden_without_token(temp_db):
     assert response.status_code == 401
 
 
-@pytest.mark.freeze_time("2015-10-21")
+@pytest.mark.freeze_time("2021-09-03")
 def test_user_detail_forbidden_with_expired_token(temp_db, freezer):
     user = UserCreate(
         email="sidious@deathstar.com",
@@ -73,7 +73,7 @@ def test_user_detail_forbidden_with_expired_token(temp_db, freezer):
         # Create user and use expired token
         loop = asyncio.get_event_loop()
         user_db = loop.run_until_complete(create_user(user))
-        freezer.move_to("'2015-11-10'")
+        freezer.move_to("'2021-09-03'")
         response = client.get(
             "/users/me",
             headers={"Authorization": f"Bearer {user_db['token']['token']}"}
